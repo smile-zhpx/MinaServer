@@ -1,4 +1,4 @@
-package com.ceprei.test.oa.jmeter;
+package com.ceprei.test.oa.pt;
 
 import java.net.MalformedURLException;
 
@@ -9,12 +9,7 @@ import org.apache.jmeter.engine.StandardJMeterEngine;
 import org.apache.jmeter.protocol.http.sampler.HTTPSampleResult;
 import org.apache.jmeter.protocol.http.sampler.HTTPSampler;
 import org.apache.jmeter.reporters.ResultCollector;
-import org.apache.jmeter.reporters.Summariser;
-import org.apache.jmeter.samplers.SampleResult;
-import org.apache.jmeter.samplers.SampleSaveConfiguration;
 import org.apache.jmeter.testelement.TestPlan;
-import org.apache.jmeter.threads.JMeterThread;
-import org.apache.jmeter.threads.ListenerNotifier;
 import org.apache.jmeter.threads.SetupThreadGroup;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.HashTree;
@@ -24,7 +19,7 @@ import org.apache.jorphan.collections.HashTree;
  * @author lins
  * 
  */
-public class JMeterLoadGenerator {
+public class JMeterInvoker {
 
 	public static void loadGen() {
 		// 初始化jmeter引擎
@@ -76,7 +71,6 @@ public class JMeterLoadGenerator {
 		
 		// 配置jmeter引擎
 		engine.configure(config);		
-		engine.register(s);
 		// 开始测试
 		engine.run();
 		
@@ -91,7 +85,7 @@ public class JMeterLoadGenerator {
 	 * url t_num method think start_delay duration load_policy
 	 * @param msg
 	 */
-	public HTTPSampleResult startLoadGenerating(JSONObject msg) {
+	public HTTPSampleResult run(JSONObject msg) {
 		HTTPSampler httpSampler = new HTTPSampler();
 		
 		String url = msg.getString("url").replaceAll("^http://", "");
@@ -105,7 +99,7 @@ public class JMeterLoadGenerator {
 	}
 
 	public static void main(String[] args) throws MalformedURLException {
-		JMeterLoadGenerator.loadGen();
+		JMeterInvoker.loadGen();
 	}
 
 }

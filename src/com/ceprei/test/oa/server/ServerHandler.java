@@ -2,11 +2,10 @@ package com.ceprei.test.oa.server;
 
 import net.sf.json.JSONObject;
 
-import org.apache.jmeter.protocol.http.sampler.HTTPSampleResult;
 import org.apache.mina.core.service.IoHandlerAdapter;
 import org.apache.mina.core.session.IoSession;
 
-import com.ceprei.test.oa.jmeter.JMeterLoadGenerator;
+import com.ceprei.test.oa.pt.ApacheBenchInvoker;
 
 public class ServerHandler extends IoHandlerAdapter {
 	@Override
@@ -22,16 +21,9 @@ public class ServerHandler extends IoHandlerAdapter {
 		JSONObject msgIn = (JSONObject) message;
 		System.out.println("Message: " + msgIn.toString());
 		
-		int loop = msgIn.getInt("t_num");
+		ApacheBenchInvoker abi = new ApacheBenchInvoker();
 		
-		JMeterLoadGenerator jmlg = new JMeterLoadGenerator();
-		HTTPSampleResult result = jmlg.startLoadGenerating(msgIn);
-		
-		JSONObject msgOut = new JSONObject();
-		msgOut.accumulate("latency", result.getLatency());
-		msgOut.accumulate("start_time", result.getStartTime());
-		msgOut.accumulate("end_time", result.getEndTime());
-		session.write(msgOut);
+		session.write(abi.run(msgIn));
 	}
 	
 	@Override

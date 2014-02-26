@@ -12,7 +12,7 @@ import org.apache.mina.filter.codec.ProtocolCodecFilter;
 import org.apache.mina.filter.codec.serialization.ObjectSerializationCodecFactory;
 import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
 
-public class TcpServer {
+public class TestExecutorServer {
 
 	public static void main(String[] args) {
 		IoAcceptor acpt = new NioSocketAcceptor();
