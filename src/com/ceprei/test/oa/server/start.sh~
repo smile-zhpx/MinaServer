@@ -1,0 +1,1 @@
+java -classpath '.:/home/ceprei/workspace/MinaServer/lib/*' com.ceprei.test.oa.server.TcpServer

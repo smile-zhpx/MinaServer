@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/ApacheJMeter.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/ApacheJMeter_core.jar" sourcepath="/home/ceprei/apache-jmeter-2.11/src">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/home/ceprei/apache-jmeter-2.11/docs/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/ApacheJMeter_http.jar" sourcepath="/home/ceprei/apache-jmeter-2.11/src">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/home/ceprei/apache-jmeter-2.11/docs/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/avalon-framework-4.1.4.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/jorphan.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/logkit-2.0.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/mina-core-2.0.7.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/slf4j-nop-1.7.5.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/oro-2.0.8.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/xstream-1.4.4.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/slf4j-api-1.6.6.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/ezmorph-1.0.6.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/commons-beanutils-1.7.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/xom-1.1.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="/home/ceprei/workspace/MinaServer/lib/xmlpull_1_1_3_4c.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
