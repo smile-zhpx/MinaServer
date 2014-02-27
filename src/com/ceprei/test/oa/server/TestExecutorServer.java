@@ -35,7 +35,7 @@ public class TestExecutorServer {
 		}
 		
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		System.out.println(df.format(new Date()) + " Mina Server started.");
+		System.out.println(df.format(new Date()) + " 执行端服务器启动.");
 	}
 
 }

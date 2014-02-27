@@ -1,4 +1,4 @@
-package com.ceprei.oa.st;
+package com.ceprei.test.oa.st;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -8,12 +8,10 @@ import java.util.List;
 import net.sf.json.JSONObject;
 
 /**
- * 由于DoSend需要root，故无法执行
  * 
  * @author ceprei
  *
  */
-@Deprecated
 public class DoSendInvoker {
 	public JSONObject run(){
 		JSONObject result = new JSONObject();
@@ -21,11 +19,11 @@ public class DoSendInvoker {
 		Process process = null;  
         List<String> processList = new ArrayList<String>();  
         try {  
-            process = Runtime.getRuntime().exec("sudo /home/ceprei/DoSend -d 127.0.0.1 -y 23 -n 10");
-            process.getOutputStream().write("123456".getBytes());
+            process = Runtime.getRuntime().exec("/home/ceprei/DoSend -d 127.0.0.1 -y 23 -n 10");
+//            process.getOutputStream().write("123456".getBytes());
 //        	process = Runtime.getRuntime().exec("/home/ceprei/apache-jmeter-2.11/bin/jmeter");
             process.waitFor();
-            Thread.sleep(5000);
+           // Thread.sleep(5000);
             BufferedReader input = new BufferedReader(new InputStreamReader(process.getInputStream()));  
             String line = "";  
             while ((line = input.readLine()) != null) {  

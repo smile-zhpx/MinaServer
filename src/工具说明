@@ -1,0 +1,27 @@
+====================================================================
+DoSend
+作用：拒绝服务攻击
+依赖：su
+	sudo -s
+	vi /etc/lightdm/lightdm.conf 
+	增加 greeter-show-manual-login=true  allow-guest=false
+	sudo passwd root  
+====================================================================
+ApacheBench
+作用：性能测试
+隶属：apache server
+依赖：libapr1 libaprutil1
+官网：http://httpd.apache.org/
+安装：sudo apt-get install apache2
+====================================================================
+The mole
+作用：sql注入攻击
+依赖:python
+	apt-get install python
+====================================================================
+Nikto
+作用：漏扫
+依赖：perl/ssl
+	apt-get install perl
+	apt-get install openssl
+

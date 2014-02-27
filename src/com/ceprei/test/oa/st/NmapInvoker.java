@@ -1,21 +1,14 @@
-package com.ceprei.test.oa.pt;
+package com.ceprei.test.oa.st;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-
-import com.ceprei.test.oa.base.TestToolInvoker;
 
 import net.sf.json.JSONObject;
 
-public class ApacheBenchInvoker implements TestToolInvoker{
+public class NmapInvoker {
 	/**
-	 * 
-	 * ab -c 10 -t 1 http://www.google.com/必须以斜杠结尾
-	 * 
-	 * @param msg
-	 *            url t_num method think start_delay duration load_policy
+	 *
 	 */
 	public JSONObject run(JSONObject msg) {
 		JSONObject result = new JSONObject();
@@ -63,27 +56,7 @@ public class ApacheBenchInvoker implements TestToolInvoker{
 		return result;
 	}
 
-	public static void main(String[] args) throws MalformedURLException {
-		StringBuilder resultStr = new StringBuilder();
-		Process process = null;
-		try {
-			process = Runtime.getRuntime().exec(
-					"ab -c 10 -t 30 http://www.baidu.com/");
-			process.waitFor();
-			// Thread.sleep(msg.getInt("duration")*60*1000+5000);
-			BufferedReader input = new BufferedReader(new InputStreamReader(
-					process.getInputStream()));
-			String line = "";
-			int i = 1;
-			while ((line = input.readLine()) != null) {
-				if (i++ > 7)
-					resultStr.append(line + "\n");
-			}
-			input.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public static void main(String[] args) {
 
-		System.out.println(resultStr);
 	}
 }
