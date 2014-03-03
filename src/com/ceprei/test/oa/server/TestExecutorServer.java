@@ -12,6 +12,10 @@ import org.apache.mina.filter.codec.ProtocolCodecFilter;
 import org.apache.mina.filter.codec.serialization.ObjectSerializationCodecFactory;
 import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
 
+/**
+ * 用于监听网络传输并处理请求的主类
+ * @author lins
+ */
 public class TestExecutorServer {
 
 	public static void main(String[] args) {

@@ -1,5 +1,9 @@
 package com.ceprei.test.oa.base;
 
+/**
+ * 测试任务的ADT，记录了测试任务的关键信息(暂未使用)
+ * @author lins
+ */
 public class TestTask {
 	public String name;
 	public long taskReceiveTime;

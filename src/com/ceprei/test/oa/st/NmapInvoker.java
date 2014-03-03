@@ -6,6 +6,10 @@ import java.io.InputStreamReader;
 
 import net.sf.json.JSONObject;
 
+/**
+ * 调用Nmap进行数据库注入
+ * @author lins
+ */
 public class NmapInvoker {
 	/**
 	 *

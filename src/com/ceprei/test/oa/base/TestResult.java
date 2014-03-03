@@ -5,6 +5,10 @@ import java.util.List;
 import org.apache.jmeter.assertions.AssertionResult;
 import org.apache.jmeter.samplers.SampleResult;
 
+/**
+ * (暂未使用)
+ * @author lins
+ */
 public class TestResult {
 	public static final byte[] EMPTY_BA = new byte[0];
 

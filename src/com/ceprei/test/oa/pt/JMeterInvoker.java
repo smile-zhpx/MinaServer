@@ -15,9 +15,8 @@ import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.HashTree;
 
 /**
- * 
- * @author lins
- * 
+ * 调用JMeter测试工具的类(暂未完全搞定)
+ * @author lins * 
  */
 public class JMeterInvoker {
 

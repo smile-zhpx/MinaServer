@@ -9,10 +9,9 @@ import java.io.OutputStreamWriter;
 import net.sf.json.JSONObject;
 
 /**
- * 由于DoSend需要root，故无法执行
+ * TheMole进行sql注入
  * 
- * @author ceprei
- * 
+ * @author lins 
  */
 public class TheMolenvoker {
 	public JSONObject run(JSONObject msg) {

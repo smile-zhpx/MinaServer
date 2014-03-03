@@ -1,5 +1,9 @@
 package com.ceprei.test.oa.base;
 
+/**
+ * 测试执行的接口(暂未使用)
+ * @author lins
+ */
 public interface ITestExecutor {
 	public TestResult excute();
 	public TestResult getTestResult();

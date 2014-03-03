@@ -8,9 +8,8 @@ import java.util.List;
 import net.sf.json.JSONObject;
 
 /**
- * 
- * @author ceprei
- *
+ * 调用DoSend工具进行网络攻击
+ * @author lins
  */
 public class DoSendInvoker {
 	public JSONObject run(){

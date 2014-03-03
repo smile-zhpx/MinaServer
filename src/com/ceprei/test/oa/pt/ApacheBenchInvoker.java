@@ -9,17 +9,22 @@ import com.ceprei.test.oa.base.TestToolInvoker;
 
 import net.sf.json.JSONObject;
 
+/**
+ * 调用ApacheBench测试工具的类
+ * @author lins
+ */
 public class ApacheBenchInvoker implements TestToolInvoker{
 	/**
 	 * 
 	 * ab -c 10 -t 1 http://www.google.com/必须以斜杠结尾
-	 * 
 	 * @param msg
-	 *            url t_num method think start_delay duration load_policy
+	 *            传送过来的请求信息，请求内包含url，t_num，method，think，start_delay，duration，load_policy
 	 */
 	public JSONObject run(JSONObject msg) {
+		// 初始化执行结果
 		JSONObject result = new JSONObject();
 
+		// 根据传送过来的消息msg构建命令行
 		StringBuilder cmd = new StringBuilder();
 		cmd.append("ab");
 		cmd.append(" -c " + msg.getInt("t_num"));
@@ -28,6 +33,7 @@ public class ApacheBenchInvoker implements TestToolInvoker{
 
 		System.out.println("开始执行 " + cmd.toString());
 
+		// 调用测试工具，执行测试
 		StringBuilder resultStr = new StringBuilder();
 		Process process = null;
 		BufferedReader input = null;
@@ -36,7 +42,7 @@ public class ApacheBenchInvoker implements TestToolInvoker{
 			process.waitFor();
 			// Thread.sleep(msg.getInt("duration")*60*1000+5000);
 			input = new BufferedReader(new InputStreamReader(
-					process.getInputStream()));
+					process.getInputStream()));//读取测试工具的执行结果
 			String line = "";
 			int i = 1;
 			while ((line = input.readLine()) != null) {
@@ -58,6 +64,7 @@ public class ApacheBenchInvoker implements TestToolInvoker{
 			}
 		}
 
+		// 构建并返回测试结果
 		result.accumulate("result", resultStr.toString());
 
 		return result;
