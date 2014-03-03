@@ -27,7 +27,7 @@ public class TestExecutorServer {
 		acpt.getFilterChain().addLast("codec",
 				new ProtocolCodecFilter(new ObjectSerializationCodecFactory()));
 		
-		acpt.setHandler(new ServerHandler());
+		acpt.setHandler(new TestExecutorSeverHandler());
 		try {
 			acpt.bind(new InetSocketAddress(9100));
 		} catch (IOException e) {

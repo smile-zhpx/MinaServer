@@ -9,7 +9,7 @@ import com.ceprei.test.oa.base.TestToolInvoker;
 import com.ceprei.test.oa.pt.ApacheBenchInvoker;
 import com.ceprei.test.oa.st.NiktoInvoker;
 
-public class ServerHandler extends IoHandlerAdapter {
+public class TestExecutorSeverHandler extends IoHandlerAdapter {
 	@Override
 	public void sessionOpened(IoSession session) {
 		System.out.println("执行端探测到web端接入: " + session.getRemoteAddress());
