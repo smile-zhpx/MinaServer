@@ -15,7 +15,7 @@ public class NmapInvoker {
 	 *
 	 */
 	public JSONObject run(JSONObject msg) {
-		JSONObject result = new JSONObject();
+		//JSONObject result = new JSONObject();
 
 		StringBuilder cmd = new StringBuilder();
 		cmd.append("ab");
@@ -55,9 +55,9 @@ public class NmapInvoker {
 			}
 		}
 
-		result.accumulate("result", resultStr.toString());
+		msg.accumulate("result", resultStr.toString());
 
-		return result;
+		return msg;
 	}
 
 	public static void main(String[] args) {

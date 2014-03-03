@@ -22,7 +22,7 @@ public class ApacheBenchInvoker implements TestToolInvoker{
 	 */
 	public JSONObject run(JSONObject msg) {
 		// 初始化执行结果
-		JSONObject result = new JSONObject();
+		//JSONObject result = new JSONObject();
 
 		// 根据传送过来的消息msg构建命令行
 		StringBuilder cmd = new StringBuilder();
@@ -65,9 +65,9 @@ public class ApacheBenchInvoker implements TestToolInvoker{
 		}
 
 		// 构建并返回测试结果
-		result.accumulate("result", resultStr.toString());
+		msg.accumulate("result", resultStr.toString());
 
-		return result;
+		return msg;
 	}
 
 	public static void main(String[] args) throws MalformedURLException {

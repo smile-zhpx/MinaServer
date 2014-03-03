@@ -9,13 +9,13 @@ import java.io.OutputStreamWriter;
 import net.sf.json.JSONObject;
 
 /**
- * TheMole进行sql注入
+ * TheMole进行sql注入，暂未搞定
  * 
  * @author lins 
  */
 public class TheMolenvoker {
 	public JSONObject run(JSONObject msg) {
-		JSONObject result = new JSONObject();
+		//JSONObject result = new JSONObject();
 
 		StringBuilder cmd = new StringBuilder();
 		cmd.append("ab");
@@ -42,8 +42,7 @@ public class TheMolenvoker {
 			int i = 0;
 			while ((line = input.readLine()) != null) {
 				System.out.println(i++ + line);
-				resultStr.append(line + "<br/>");
-				
+				resultStr.append(line + "<br/>");				
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -65,7 +64,7 @@ public class TheMolenvoker {
 
 		System.out.println(resultStr.toString());
 
-		return result;
+		return msg;
 	}
 
 	public static void main(String[] args) {

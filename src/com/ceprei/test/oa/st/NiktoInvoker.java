@@ -19,7 +19,7 @@ public class NiktoInvoker implements TestToolInvoker {
 	 *
 	 */
 	public JSONObject run(JSONObject msg) {
-		JSONObject result = new JSONObject();
+		//JSONObject result = new JSONObject();
 
 		 StringBuilder cmd = new StringBuilder();
 		 cmd.append("perl /home/ceprei/download/nikto-2.1.5/nikto.pl");
@@ -62,9 +62,9 @@ public class NiktoInvoker implements TestToolInvoker {
 			}
 		}
 
-		result.accumulate("result", resultStr.toString());
+		msg.accumulate("result", resultStr.toString());
 
-		return result;
+		return msg;
 	}
 
 	public static void main(String[] args) {
