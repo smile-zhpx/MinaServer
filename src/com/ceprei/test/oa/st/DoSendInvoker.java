@@ -18,7 +18,7 @@ public class DoSendInvoker {
 		Process process = null;  
         List<String> processList = new ArrayList<String>();  
         try {  
-            process = Runtime.getRuntime().exec("/home/ceprei/DoSend -d 127.0.0.1 -y 23 -n 10");
+            process = Runtime.getRuntime().exec("/home/ceprei/download/Dosend -d 127.0.0.1 -y 23 -n 10");
 //            process.getOutputStream().write("123456".getBytes());
 //        	process = Runtime.getRuntime().exec("/home/ceprei/apache-jmeter-2.11/bin/jmeter");
             process.waitFor();
